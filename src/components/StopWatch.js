@@ -50,7 +50,13 @@ const StopWatch = () => {
 
   return (
     <div>
-      <MajorClock milliseconds={currentTime - startTime} />
+      <h1 className='text-3xl font-bold text-center my-4 text-amber-700'>
+        秒表
+      </h1>
+      <div className=' text-4xl font-bold'>
+        <MajorClock milliseconds={currentTime - startTime} />
+      </div>
+
       <ControlButton
         activated={isStarted}
         onSplit={onSplit}

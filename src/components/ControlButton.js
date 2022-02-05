@@ -5,16 +5,32 @@ const ControlButton = (props) => {
   const { activated, onStart, onPause, onSplit, onReset } = props;
   if (activated) {
     return (
-      <div>
-        <button onClick={onSplit}>计次</button>
-        <button onClick={onPause}>停止</button>
+      <div className='flex justify-center space-x-24 m-10'>
+        <button
+          onClick={onSplit}
+          className='w-16 h-16 rounded-full border-[1px] border-zinc-300 text-zinc-700 font-bold'>
+          计次
+        </button>
+        <button
+          onClick={onPause}
+          className='w-16 h-16 rounded-full border-[1px] border-zinc-300 text-zinc-700 font-bold'>
+          停止
+        </button>
       </div>
     );
   } else {
     return (
-      <div>
-        <button onClick={onReset}>复位</button>
-        <button onClick={onStart}>启动</button>
+      <div className='flex justify-center space-x-24 m-10'>
+        <button
+          onClick={onReset}
+          className='w-16 h-16 rounded-full border-[1px] border-zinc-300 text-zinc-700 font-bold'>
+          复位
+        </button>
+        <button
+          onClick={onStart}
+          className='w-16 h-16 rounded-full border-[1px] border-zinc-300 text-zinc-700 font-bold'>
+          启动
+        </button>
       </div>
     );
   }

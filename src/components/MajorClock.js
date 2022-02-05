@@ -23,7 +23,11 @@ const ms2Time = (milliseconds) => {
 };
 
 const MajorClock = ({ milliseconds = 0 }) => {
-  return <h1>{ms2Time(milliseconds)}</h1>;
+  return (
+    <div className='font-mono text-center'>
+      {ms2Time(milliseconds)}
+    </div>
+  );
 };
 
 MajorClock.propTypes = {
