@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import MajorClock from './MajorClock';
 
-const SplitTime = (props) => {
-  return <div></div>;
+const SplitTime = ({ value = [] }) => {
+  return value.map((v, k) => <MajorClock key={k} milliseconds={v} />);
 };
 
 SplitTime.propTypes = {
